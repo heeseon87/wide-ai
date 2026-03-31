@@ -1,0 +1,9 @@
+Wide AI lets you expand the conversation area on Claude (claude.ai) and ChatGPT (chatgpt.com) to make better use of your screen space.
+
+Set the conversation width anywhere from 50% to 100% using a slider or by typing a number directly. Settings are saved per site, so Claude and ChatGPT each keep their own width preference, synced across your browsers via Chrome storage.
+
+Changes apply in real time. Only the conversation area is resized — the input box stays untouched. The extension also detects when Claude's Artifacts panel or ChatGPT's Canvas is open and automatically disables itself to avoid layout conflicts.
+
+Dark mode is supported automatically. When you disable or remove the extension, the original layout is restored immediately.
+
+More AI sites will be supported in future updates.
