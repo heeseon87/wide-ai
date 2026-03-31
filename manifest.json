@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Wide AI",
+  "version": "0.1.0",
+  "description": "Adjust the conversation width of AI chat sites like Claude and ChatGPT",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://claude.ai/*",
+    "https://chatgpt.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Wide AI"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*", "https://chatgpt.com/*"],
+      "js": ["content/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

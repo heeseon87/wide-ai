@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Wide AI</h1>
+    </header>
+
+    <div class="site-control" id="claude-section">
+      <div class="site-header">
+        <span class="site-name">Claude.ai</span>
+        <span class="site-badge" id="claude-badge">현재 탭</span>
+      </div>
+      <div class="slider-row">
+        <input type="range" id="claude_width_slider" min="50" max="100" value="50" step="1">
+        <div class="number-input">
+          <input type="number" id="claude_width_number" min="50" max="100" placeholder="--">
+          <span class="unit">%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-control" id="chatgpt-section">
+      <div class="site-header">
+        <span class="site-name">ChatGPT</span>
+        <span class="site-badge" id="chatgpt-badge">현재 탭</span>
+      </div>
+      <div class="slider-row">
+        <input type="range" id="chatgpt_width_slider" min="50" max="100" value="50" step="1">
+        <div class="number-input">
+          <input type="number" id="chatgpt_width_number" min="50" max="100" placeholder="--">
+          <span class="unit">%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="unsupported-msg" id="unsupported-msg">
+      지원하지 않는 사이트입니다
+    </div>
+
+    <hr>
+    <button id="reset-btn" class="reset-btn">리셋</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
