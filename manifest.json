@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Wide AI",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Adjust the conversation width of AI chat sites like Claude and ChatGPT",
   "permissions": ["storage", "activeTab", "scripting"],
   "host_permissions": [
