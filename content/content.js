@@ -17,7 +17,8 @@
         // 외부 컨테이너를 넓히되, 입력 영역은 원래 너비 유지
         return `
           html body [class*="overflow-y-auto"] [class*="max-w-3xl"] {
-            max-width: ${pct}% !important;
+            /* 좁은 창에서 기본 너비(48rem)보다 좁아지지 않도록 하한을 둔다 */
+            max-width: max(48rem, ${pct}%) !important;
           }
           html body [class*="max-w-3xl"]:has(.ProseMirror) > :not([class*="max-w-3xl"]) {
             max-width: 48rem !important;
@@ -42,7 +43,8 @@
         // 대화 영역은 뷰포트 기준으로 넓히고, 입력 영역(#thread-bottom-container)은 원래 크기 유지
         return `
           html body {
-            --wide-ai-chatgpt-content-width: ${pct}vw !important;
+            /* 좁은 창에서 기본 너비(48rem)보다 좁아지지 않도록 하한을 둔다 */
+            --wide-ai-chatgpt-content-width: max(48rem, ${pct}vw) !important;
           }
 
           html body main,
